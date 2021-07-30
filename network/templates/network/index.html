@@ -1,0 +1,22 @@
+{% extends "network/layout.html" %}
+
+{% block body %}
+
+    <h1 style="margin-left: 35px;">Welcome to Wellington's twitter-like Project</h1><br><br>
+    <h1 style="margin-left: 35px;">New Post</h1>
+    <div id="compose-post" class="row">
+        <div class="container-fluid" style="border: 1px outset red; background-color: lightblue; margin: 35px; padding: 10px">
+          <!--<h4 style="padding: 10px;">New Post</h4>-->
+          <form method="post" onsubmit="return false;">
+            {% csrf_token %}
+            <textarea id="new_post" name="new_post" rows="3" cols="180">
+            </textarea>
+            <br/>
+            <button type="button" id="button">Post</button>
+          </form>
+        </div>
+    </div>
+
+    <h5></h5>
+
+{% endblock %}
